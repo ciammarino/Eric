@@ -1,0 +1,8 @@
+﻿@import '/utilities/_mixins';
+@import '/_variables';
+@import '_fonts';
+
+.feature-flex {
+    @include flex(300px, $accent-light, auto, auto, $primary-light, $primary-dark, 1rem;
+    )
+}

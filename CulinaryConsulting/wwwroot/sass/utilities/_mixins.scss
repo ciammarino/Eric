@@ -1,0 +1,24 @@
+﻿@import 'utilities/_variables';
+
+@mixin flex($container-height, $container-bg-color, $item-height, $item-width, $item-bg-color, $font-color, $font-size) {
+
+    .flexbox-container {
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        height: $container-height;
+        background-color: $container-bg-color;
+    }
+
+    .flexbox-item {
+        text-align: center;
+        margin-top: auto;
+        padding: 10px;
+        background-color: $item-bg-color;
+        color: $font-color;
+        font-size: $font-size;
+        width: $item-width;
+        height: $item-height;
+    }
+}
