@@ -10,6 +10,8 @@
       <Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="bootstrap" Version="4.4.1" />
+    <PackageReference Include="jQuery" Version="3.4.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,5 +19,34 @@
     <Folder Include="wwwroot\sass\pages\" />
     <Folder Include="wwwroot\sass\utilities\" />
     <Folder Include="wwwroot\sass\base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\sass\base\_default.scss" />
+    <Content Remove="wwwroot\sass\base\base.scss" />
+    <Content Remove="wwwroot\sass\main.scss" />
+    <Content Remove="wwwroot\sass\utilities\utilities.scss" />
+    <Content Remove="wwwroot\sass\pages\pages.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="wwwroot\sass\base\_default.scss">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Compile>
+    <Compile Include="wwwroot\sass\base\base.scss">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Compile>
+    <Compile Include="wwwroot\sass\main.scss">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Compile>
+    <Compile Include="wwwroot\sass\utilities\utilities.scss">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Compile>
+    <Compile Include="wwwroot\sass\pages\pages.scss">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Compile>
   </ItemGroup>
 </Project>
